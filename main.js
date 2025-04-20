@@ -1,20 +1,30 @@
-window.onload = async () => {
-  const response = await fetch("config.json");
-  const config = await response.json();
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+const music = document.getElementById("music");
 
-  document.body.innerHTML = `<h1>${config.title}</h1><ul id="song-list"></ul>`;
+let notes = [];
 
-  const list = document.getElementById("song-list");
+fetch("data/notes.json")
+  .then(res => res.json())
+  .then(data => {
+    notes = data.notes;
+    music.play();
+    requestAnimationFrame(update);
+  });
 
-  for (const week of config.weeks) {
-    for (const song of week.songs) {
-      const li = document.createElement("li");
-      li.textContent = `▶︎ ${song}`;
-      li.onclick = async () => {
-        const songData = await fetch(`${song}.json`).then(r => r.json());
-        document.body.innerHTML = `<h2>${songData.songName} - ${songData.bpm} BPM</h2>`;
-      };
-      list.appendChild(li);
+function update() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  const currentTime = music.currentTime;
+
+  for (let note of notes) {
+    const timeDiff = note.time - currentTime;
+    const y = 500 - timeDiff * 200; // 落下スピード調整
+    if (y > -50 && y < 600) {
+      ctx.fillStyle = "lime";
+      ctx.fillRect(note.lane * 100 + 100, y, 80, 20);
     }
   }
-};
+
+  requestAnimationFrame(update);
+}
