@@ -1,10 +1,8 @@
-
 {
-  "songName": "opposition",
-  "bpm": 160,
   "notes": [
-    {"time": 1.0, "lane": 1},
-    {"time": 1.5, "lane": 2},
-    {"time": 2.0, "lane": 3}
+    { "time": 1.0, "lane": 0 },
+    { "time": 2.0, "lane": 1 },
+    { "time": 3.0, "lane": 2 },
+    { "time": 4.0, "lane": 3 }
   ]
 }
