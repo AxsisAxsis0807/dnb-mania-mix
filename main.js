@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>D&B Mania Mix - Opposition Test</title>
-  <style>
-    canvas {
-      border: 2px solid black;
-      background: #111;
-      display: block;
-      margin: auto;
-    }
-  </style>
-</head>
-<body>
-  <h1 style="text-align:center;">D&B Mania Mix - Opposition Test</h1>
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+const music = document.getElementById("music");
 
-  <!-- ゲーム画面 -->
-  <canvas id="gameCanvas" width="500" height="600"></canvas>
+// ゲーム開始処理
+music.addEventListener("canplaythrough", () => {
+  music.play();
+  startGame();
+});
 
-  <!-- 音楽ファイルの読み込み -->
-  <audio id="music" src="opposition.mp3"></audio>
+function startGame() {
+  // 背景を描画
+  ctx.fillStyle = "#222";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  <!-- JavaScriptを読み込む -->
-  <script src="main.js"></script>
-</body>
-</html>
+  // テキスト表示
+  ctx.fillStyle = "#fff";
+  ctx.font = "24px Arial";
+  ctx.fillText("D&B Mania Mix", 150, 100);
+  ctx.fillText("Opposition Test", 135, 140);
+}
