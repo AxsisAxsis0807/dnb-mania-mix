@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>opposition - Dave and Bambi Mania Mix</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>D&B Mania Mix – Opposition Test</title>
+  <style>
+    canvas {
+      border: 2px solid black;
+      background: #111;
+      display: block;
+      margin: auto;
+    }
+  </style>
 </head>
 <body>
-  <h1>opposition - 160 BPM</h1>
-  <canvas id="gameCanvas" width="800" height="600"></canvas>
-  <audio id="music" src="assets/music.mp3"></audio>
-  <script src="script.js"></script>
+  <h1 style="text-align:center;">D&B Mania Mix – Opposition Test</h1>
+
+  <!-- ゲーム画面 -->
+  <canvas id="gameCanvas" width="500" height="600"></canvas>
+
+  <!-- 音楽ファイルの読み込み -->
+  <audio id="music" src="songs/opposition/opposition.mp3"></audio>
+
+  <!-- JavaScriptファイルを読み込む -->
+  <script src="main.js"></script>
 </body>
 </html>
