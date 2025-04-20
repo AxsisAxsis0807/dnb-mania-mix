@@ -1,41 +1,14 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DNB Mania Mix</title>
-    <style>
-      body {
-        background-color: black;
-        color: white;
-        font-family: sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>読み込み成功！</h1>
-
-    <script src="dnb-mania-mix-opposition.js"></script>
-    <script>
-      console.log("スクリプト読み込みOK");
-
-      fetch("config.json")
-        .then(res => res.json())
-        .then(data => {
-          console.log("設定ファイル読み込み成功:", data);
-          const p = document.createElement("p");
-          p.innerText = "config.jsonの中身: " + JSON.stringify(data);
-          document.body.appendChild(p);
-        })
-        .catch(err => {
-          console.error("エラー:", err);
-          document.body.innerHTML +=
-            "<p style='color: red;'>config.jsonの読み込みに失敗しました。</p>";
-        });
-    </script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dave and Bambi Mania Mix</title>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <h1>Welcome to Dave and Bambi Mania Mix!</h1>
+  <p>Loading game...</p>
+</body>
 </html>

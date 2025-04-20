@@ -1,2 +1,2 @@
-# dnb-mania-mix
-FNF Dave and Bambi Mania Mix
+# Dave and Bambi Mania Mix
+This is a temporary version for GitHub Pages testing.

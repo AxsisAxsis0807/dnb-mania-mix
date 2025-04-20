@@ -1,4 +1,10 @@
+
 {
-  "title": "D&B Mania Mix",
-  "weeks": ["week-strident-crisis"]
+  "title": "Dave and Bambi Mania Mix",
+  "weeks": [
+    {
+      "name": "week-strident-crisis",
+      "songs": ["opposition"]
+    }
+  ]
 }

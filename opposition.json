@@ -1,4 +1,10 @@
+
 {
-  "song": "opposition",
-  "notes": []
+  "songName": "opposition",
+  "bpm": 160,
+  "notes": [
+    {"time": 1.0, "lane": 1},
+    {"time": 1.5, "lane": 2},
+    {"time": 2.0, "lane": 3}
+  ]
 }
